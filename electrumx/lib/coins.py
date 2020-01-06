@@ -330,6 +330,20 @@ class KomodoMixin(object):
                     '63bfa1beae327897f56c5cfb7daaae71')
     DESERIALIZER = lib_tx.DeserializerZcash
 
+class GleecBTC(Coin):
+            NAME = "GleecBTC"
+            SHORTNAME = "GLEEC"
+            NET = "mainnet"
+            XPUB_VERBYTES = bytes.fromhex("0488B21E")
+            XPRV_VERBYTES = bytes.fromhex("0488ADE4")
+            P2PKH_VERBYTE = bytes.fromhex("23")
+            P2SH_VERBYTES = [bytes.fromhex("26")]
+            WIF_BYTE = bytes.fromhex("41")
+            GENESIS_HASH = ('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f')
+            TX_COUNT = 1759864
+            TX_COUNT_HEIGHT = 1614311
+            TX_PER_BLOCK = 1.08
+            DESERIALIZER = lib_tx.DeserializerSegWit
 
 class BitcoinMixin(object):
     SHORTNAME = "BTC"
